@@ -11,6 +11,7 @@ This repository includes implementations of commonly used STL data structures an
 ### Containers
 
 - **Vector**: Dynamic array with contiguous memory storage, supporting random access, dynamic resizing, and efficient insertion/removal at the end.
+- **List**: A custom singly linked list implementation supporting efficient insertions and deletions at both ends and arbitrary positions, with features like dynamic memory management, size tracking, and element access.
 
 ## How to Use
 
