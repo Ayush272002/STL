@@ -3,7 +3,7 @@ CFLAGS = -std=c++17 -Igoogletest/googletest/include
 LDFLAGS = -pthread -Lgoogletest/build/lib -lgtest -lgtest_main
 
 # Default target
-all: googletest_build list_test vector_test
+all: googletest_build list_test vector_test string_test
 
 # Build GoogleTest if not already built
 googletest_build:
@@ -16,6 +16,10 @@ vector_test: tests/test_vector.cpp containers/vector/vector.cpp googletest_build
 # Compile test_list.cpp with Google Test
 list_test: tests/test_list.cpp containers/list/list.cpp googletest_build
 	$(CC) $(CFLAGS) tests/test_list.cpp containers/list/list.cpp -o list_test.out $(LDFLAGS)
+
+# Compile test_string.cpp with Google Test
+string_test: tests/test_string.cpp containers/string/string.cpp googletest_build
+	$(CC) $(CFLAGS) tests/test_string.cpp containers/string/string.cpp -o string_test.out $(LDFLAGS)
 
 # Clean all outputs
 clean:

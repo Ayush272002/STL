@@ -10,6 +10,7 @@ This repository includes implementations of commonly used STL data structures an
 
 ### Containers
 
+- **string**: A custom string class with dynamic memory management, efficient resizing, C-string support, concatenation, and element access with bounds checking.
 - **Vector**: Dynamic array with contiguous memory storage, supporting random access, dynamic resizing, and efficient insertion/removal at the end.
 - **List**: A custom singly linked list implementation supporting efficient insertions and deletions at both ends and arbitrary positions, with features like dynamic memory management, size tracking, and element access.
 
@@ -34,6 +35,6 @@ This repository includes implementations of commonly used STL data structures an
    ```
 3. Run tests (for a specific container eg:- vector):
    ```bash
-   make test
+   make vector_test
    ./vector_test.out
    ```
