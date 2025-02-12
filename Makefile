@@ -21,6 +21,10 @@ list_test: tests/test_list.cpp containers/list/list.cpp googletest_build
 string_test: tests/test_string.cpp containers/string/string.cpp googletest_build
 	$(CC) $(CFLAGS) tests/test_string.cpp containers/string/string.cpp -o string_test.out $(LDFLAGS)
 
+# Compile test_queue.cpp with Google Test
+queue_test: tests/test_queue.cpp containers/queue/queue.cpp googletest_build
+	$(CC) $(CFLAGS) tests/test_queue.cpp containers/queue/queue.cpp -o queue_test.out $(LDFLAGS)
+
 # Clean all outputs
 clean:
 	rm -f *.out *.o
