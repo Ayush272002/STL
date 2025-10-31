@@ -29,12 +29,10 @@ This repository includes implementations of commonly used STL data structures an
    ```
 2. Build using CMake:
    ```bash
-   mkdir build
-   cd build
-   cmake ..
-   make
+   chmod +x build.sh
+   ./build.sh all
    ```
 3. Run tests (for a specific container eg:- vector):
    ```bash
-   ./test_vector
+   ./build.sh test [container]
    ```
