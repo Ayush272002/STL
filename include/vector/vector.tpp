@@ -283,12 +283,12 @@ namespace STL {
     }
 
     template<typename T>
-    constexpr const T *vector<T>::begin() const {
+    constexpr const T* vector<T>::begin() const {
         return _data;
     }
 
     template<typename T>
-    constexpr const T *vector<T>::cbegin() const noexcept {
+    constexpr const T* vector<T>::cbegin() const noexcept {
         return _data;
     }
 

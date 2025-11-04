@@ -5,7 +5,10 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-file(GLOB STL_HEADERS include/vector/*.hpp include/vector/*.tpp)
+file(GLOB_RECURSE STL_HEADERS
+        include/*.hpp
+        include/*.tpp
+)
 
 add_library(STL INTERFACE)
 target_include_directories(STL INTERFACE include)
