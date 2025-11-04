@@ -10,6 +10,7 @@ This repository includes implementations of commonly used STL data structures an
 
 ### Containers
 
+- **Array**: Fixed-size sequence container that stores elements contiguously. Supports compile-time size, constant-time indexed access, full iterator support, reverse iteration, structured binding, and helper utilities like `get<>`, `swap`, and `to_array`.
 - **Vector**: Dynamic array with contiguous memory storage, supporting random access, dynamic resizing, and efficient insertion/removal at the end.
 
 ## How to Use

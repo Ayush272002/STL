@@ -10,6 +10,7 @@ function show_help() {
     echo "Usage: ./build.sh [command] [container]"
     echo "Commands:"
     echo "  all                     Build everything (library + tests + benchmarks)"
+    echo "  test                    Build everything and run all tests"
     echo "  test [container]        Build and run tests (all or specific container)"
     echo "  benchmark [container]   Build and run benchmark (all or specific container)"
     echo "  clean                   Remove build directory"
@@ -46,6 +47,9 @@ function run_tests() {
     ensure_build
 
     if [ -z "$container" ]; then
+        echo "=== Building all tests ==="
+        cmake --build . --config Release
+
         echo "=== Running all tests ==="
         ctest --output-on-failure
     else
